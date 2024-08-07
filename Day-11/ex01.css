@@ -371,8 +371,11 @@ button {
   color: #000;
   opacity: 0.6;
   line-height: 1.6;
-  padding-bottom: 5rem;
   font-size: 1.6rem;
+}
+
+.footer-bottom {
+  padding: 5rem 0;
 }
 
 .footer-bottom > a {
