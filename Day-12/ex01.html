@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viking | Home</title>
+    <link rel="stylesheet" href="../Day-12/css/ex01.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <input type="radio" id="tab-switch-login" name="open" hidden />
+    <input type="radio" id="tab-switch-register" name="open" hidden />
+    <div class="container">
+      <!-- Wrapper-decoraition -->
+      <div class="wrapper-decoration"></div>
+      <!-- Wrapper-decoraition End -->
+      <!-- Wrapper-info -->
+      <div class="wrapper-info">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../Day-12/img/Logo.png" alt="Logo Viking" />
+        </div>
+        <!--Logo End-->
+        <!-- Text -->
+        <h1>
+          Welcome to <span class="wrapper-info-text-bigger">Vikinger</span>
+        </h1>
+        <p class="wrapper-info-description">
+          The next generation social network & community! Connect with your
+          friends and play with our quests and badges gamification system!
+        </p>
+        <!-- Text End -->
+        <!-- Wrapper-info-tabSwitch -->
+        <div class="wrapper-info-tabSwitch">
+          <label class="tab-switch-button login" for="tab-switch-login">
+            Login
+          </label>
+          <label class="tab-switch-button register" for="tab-switch-register">
+            Register
+          </label>
+        </div>
+        <!-- Wrapper-info-tabSwitch End-->
+      </div>
+      <!-- Wrapper-info End-->
+      <!-- Wrapper-btn -->
+      <div class="wrapper-btn">
+        <div class="form-login"></div>
+        <div class="form-login form-register"></div>
+      </div>
+      <!-- Wrapper-btn End-->
+      <!-- Wrapper-form -->
+      <div class="wrapper-form">
+        <!-- Form-box login  -->
+        <div class="form-box login">
+          <img
+            class="form-box-decoration"
+            src="https://odindesignthemes.com/vikinger/img/landing/rocket.png"
+            alt="rocket"
+          />
+          <h2>Account Login</h2>
+          <form action="#!">
+            <div class="form-field">
+              <input type="text" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Username or Email</label>
+            </div>
+            <div class="form-field">
+              <input type="password" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Passord</label>
+            </div>
+            <div class="wrapper space-between">
+              <div class="wrapper-checkbox">
+                <input
+                  type="checkbox"
+                  id="login-remember"
+                  name="login-remember"
+                  checked
+                  hidden
+                />
+                <label class="checkbox-box">
+                  <span class="common line-top"></span>
+                  <span class="common line-bottom"></span>
+                </label>
+                <label for="login-remember" class="text-label">
+                  Remember Me
+                </label>
+              </div>
+              <a href="#">Forgot Passord?</a>
+            </div>
+            <button class="btn-login">Login to your Account!</button>
+            <span class="text-links">Login with your Social Account</span>
+          </form>
+          <nav class="links-social">
+            <ul class="list-links">
+              <li class="links-item">
+                <a href="#" class="fa-brands fa-square-facebook links-fb"></a>
+              </li>
+              <li class="links-item">
+                <a href="#" class="fa-brands fa-twitter link-twitter"></a>
+              </li>
+              <li class="links-item">
+                <a href="#" class="fa-brands fa-twitch links-twitch"></a>
+              </li>
+              <li class="links-item">
+                <a href="#" class="fa-brands fa-youtube links-ytb"></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Form-box login End -->
+        <!-- Form-box register -->
+        <div class="form-box register">
+          <img
+            class="form-box-decoration"
+            src="https://odindesignthemes.com/vikinger/img/landing/rocket.png"
+            alt="rocket"
+          />
+          <h2>Create your Account!</h2>
+          <form action="#!">
+            <div class="form-field">
+              <input type="text" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Your Email</label>
+            </div>
+            <div class="form-field">
+              <input type="text" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Username</label>
+            </div>
+            <div class="form-field">
+              <input type="password" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Passord</label>
+            </div>
+            <div class="form-field">
+              <input type="password" class="form-input" placeholder=" " />
+              <label for="name" class="form-label">Repeat Passord</label>
+            </div>
+            <div class="wrapper space-between">
+              <div class="wrapper-checkbox">
+                <input
+                  type="checkbox"
+                  id="register"
+                  name="register"
+                  checked
+                  hidden
+                />
+                <label class="checkbox-box register-check">
+                  <span class="common line-top"></span>
+                  <span class="common line-bottom"></span>
+                </label>
+                <label for="register" class="text-label">
+                  Send me news and updates via email
+                </label>
+              </div>
+            </div>
+            <button class="btn-register">Register Now!</button>
+            <span class="text-wrap">
+              You'll receive a confirmation email in your inbox with a link to
+              activate your account. If you have any problems,
+              <a href="#">contact us!</a>
+            </span>
+          </form>
+        </div>
+        <!-- Form-box register End -->
+      </div>
+      <!-- Wrapper-form End-->
+    </div>
+  </body>
+</html>
