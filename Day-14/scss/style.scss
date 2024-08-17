@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .wrapper-inner {
   width: 90%;
   margin: 0 auto;
@@ -233,6 +237,9 @@ a {
   html {
     font-size: 50%;
   }
+  .wrapper-inner .sidebar .chat-btn {
+    column-gap: 1rem;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .wrapper-inner {
@@ -295,6 +302,50 @@ a {
   }
 }
 @media screen and (max-width: 767.98px) {
-}
-@media screen and (max-width: 575.98px) {
+  .wrapper-inner {
+    width: 95%;
+    padding: 1rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-auto-columns: 1fr;
+    gap: 22px 22px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sidebar"
+      "header"
+      "main";
+
+    .sidebar {
+      grid-area: sidebar;
+      flex-direction: row;
+      padding: 2rem 0 0 0;
+      .heading {
+        display: none;
+      }
+      .nav {
+        flex-direction: row;
+        margin-top: 7rem;
+        margin-left: -12rem;
+        column-gap: 2rem;
+
+        .nav-item {
+          flex-direction: column;
+        }
+      }
+    }
+    .chat-btn {
+      position: fixed;
+      bottom: 0;
+      .hidden {
+        display: none;
+      }
+    }
+    .header {
+      grid-area: header;
+    }
+    .main {
+      grid-area: main;
+    }
+  }
 }
