@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper-inner {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "sidebar header header header header" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main";
+}
+
+.sidebar {
+  padding: 5.4rem 0 0 5.8rem;
+  grid-area: sidebar;
+  margin-right: 38px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .heading {
+  margin-top: 6rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+.sidebar .nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.8rem;
+  row-gap: 1.8rem;
+}
+.sidebar .nav .nav-item {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.25s linear;
+}
+.sidebar .nav .nav-item:hover {
+  background-color: #ebebeb;
+}
+.sidebar .nav .nav-item .icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+}
+.sidebar .chat-btn {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: auto;
+  cursor: pointer;
+}
+.sidebar .chat-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  transition: background-color 0.25s linear;
+}
+.sidebar .chat-btn .icon:hover {
+  background-color: #ebebeb;
+}
+
+.header {
+  height: 12.8rem;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+.header .search-form {
+  display: flex;
+  align-items: center;
+  column-gap: 1.8rem;
+  margin-right: auto;
+}
+.header .search-form .search {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #fff;
+}
+.header .search-form .search::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.header .nav {
+  display: flex;
+  column-gap: 4.6rem;
+}
+.header .nav .nav-link {
+  position: relative;
+  padding-bottom: 0.8rem;
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 600;
+}
+.header .nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.3rem;
+  background-color: #000;
+  transition: width 0.25s linear;
+}
+.header .nav .nav-link:hover::after, .header .nav .nav-link.active::after {
+  width: 100%;
+}
+.header .actions {
+  display: flex;
+  align-items: center;
+  column-gap: 2.6rem;
+  margin-left: 5rem;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 18.8rem;
+  gap: 22px 22px;
+}
+.main .layout-item {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1.6rem;
+}
+.main .layout-item:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.main .layout-item:nth-child(2) {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.main .layout-item:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.main .layout-item:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 3/5;
+}
+.main .layout-item:nth-child(5) {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.main .layout-item:nth-child(6) {
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+.main .layout-item:nth-child(7) {
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+.main .layout-item:nth-child(8) {
+  grid-column: 3/5;
+  grid-row: 4/5;
+}
+.main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.25s ease;
+}
+.main img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1199.98px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .wrapper-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .wrapper-inner .sidebar {
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .wrapper-inner .header {
+    height: 10rem;
+  }
+  .wrapper-inner .header form {
+    gap: 0;
+  }
+  .wrapper-inner .header .nav {
+    column-gap: 2rem;
+  }
+  .wrapper-inner .header .actions {
+    column-gap: 1.5rem;
+    margin-left: 2rem;
+  }
+  .wrapper-inner .main {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 18.8rem;
+    gap: 1rem 1rem;
+    grid-template-areas: "layout1 layout2" "layout3 layout4" "layout5 layout6" "layout7 layout8";
+  }
+  .wrapper-inner .main .layout-item:nth-child(1) {
+    grid-area: layout1;
+  }
+  .wrapper-inner .main .layout-item:nth-child(2) {
+    grid-area: layout2;
+  }
+  .wrapper-inner .main .layout-item:nth-child(3) {
+    grid-area: layout3;
+  }
+  .wrapper-inner .main .layout-item:nth-child(4) {
+    grid-area: layout4;
+  }
+  .wrapper-inner .main .layout-item:nth-child(5) {
+    grid-area: layout5;
+  }
+  .wrapper-inner .main .layout-item:nth-child(6) {
+    grid-area: layout6;
+  }
+  .wrapper-inner .main .layout-item:nth-child(7) {
+    grid-area: layout7;
+  }
+  .wrapper-inner .main .layout-item:nth-child(8) {
+    grid-area: layout8;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
