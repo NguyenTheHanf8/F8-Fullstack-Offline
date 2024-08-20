@@ -1,0 +1,115 @@
+%section-before {
+  background: linear-gradient(to left, #7a60ff, #cd9ffa);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url(https://trandong0512.github.io/F8_BTVN_K10_d14/images/pattern.png);
+  }
+}
+
+%position-container {
+  position: relative;
+  z-index: 2;
+}
+
+%section-heading {
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+%line {
+  height: 2px;
+  width: 50px;
+  background: #8e1efc;
+  display: block;
+  margin: 2rem auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 2px;
+    border-bottom: 2px dashed #8e1efc;
+  }
+}
+
+%section-description {
+  color: $desciptionColor;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+%features-item {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+%common-heading {
+  .section-heading {
+    @extend %section-heading;
+  }
+  .line {
+    @extend %line;
+  }
+  .section-description {
+    @extend %section-description;
+    padding: 0 1.2rem;
+  }
+}
+
+%card-icon {
+  display: block;
+  min-width: 5rem;
+  height: 5rem;
+  border-radius: 100px;
+  color: $purpleColor;
+  font-size: 1.8rem;
+  line-height: 5rem;
+  border: 1px solid $purpleColor;
+}
+
+%card-text {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  color: $whiteColor;
+}
+
+%heading-card {
+  line-height: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+%card-des {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+%links-dowload {
+  display: flex;
+  column-gap: 1.4rem;
+  margin-bottom: 0.3rem;
+  .links-dowItem {
+    overflow: hidden;
+    a {
+      img {
+        height: 50px;
+        width: auto;
+        border-radius: 0.7rem;
+      }
+    }
+  }
+}
