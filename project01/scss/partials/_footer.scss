@@ -1,0 +1,76 @@
+@use "./variables";
+@use "./mixins";
+
+.footer {
+  margin-top: 10rem;
+  padding-bottom: 1rem;
+  .container {
+    .row {
+      padding-bottom: 5rem;
+      border-bottom: 1px solid #a3a3a3;
+      .col-xxl-3 {
+        padding: 0;
+
+        @include mixins.md-device {
+          padding: 0 4rem;
+        }
+
+        .wrap-itemFooter {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1.4rem;
+
+          @include mixins.md-device {
+            row-gap: 1rem;
+            margin-bottom: 2rem;
+          }
+
+          .logo {
+            width: 13.2rem;
+          }
+          .des-itemFooter {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2rem;
+
+            @include mixins.lg-device {
+              margin-bottom: 1rem;
+            }
+
+            .bigger-text {
+              font-size: 1.6rem;
+            }
+          }
+          .heading-item {
+            color: variables.$lightgreenCOlor;
+          }
+          a {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .wrap-footerLinks {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-linksFooter {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.2rem;
+
+        a {
+          color: inherit;
+          padding: 0.9rem;
+          border-radius: 50%;
+          background-color: #dcffca;
+        }
+      }
+    }
+  }
+}

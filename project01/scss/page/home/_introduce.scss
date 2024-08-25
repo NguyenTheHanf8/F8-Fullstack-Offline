@@ -1,0 +1,132 @@
+@use "../../partials/variables";
+@use "../../partials/mixins";
+@use "../../partials/base";
+.introduce {
+  margin-top: 10.8rem;
+  @include mixins.xl-device {
+    text-align: center;
+  }
+  @include mixins.sm-device {
+    margin-top: 12rem;
+  }
+  .container {
+    margin: 0 auto;
+
+    @include mixins.md-device {
+      padding: 0;
+    }
+
+    .row {
+      flex-wrap: nowrap;
+      @include mixins.xxl-device {
+        justify-content: space-between;
+      }
+
+      @include mixins.xl-device {
+        flex-wrap: wrap;
+      }
+      .col-xxl-6 {
+        padding: 0;
+        .wrap-introText {
+          margin-top: 21.75rem;
+          color: variables.$contentColor;
+          @include mixins.xl-device {
+            margin-top: 0;
+            padding: 2rem 0;
+            background-color: #dcffca;
+            border-radius: 1.7rem 1.7rem 0 0;
+          }
+
+          .intro-heading {
+            font-size: 3.7rem;
+            font-weight: 800;
+            line-height: 4.8rem;
+          }
+
+          .intro-headingBigger {
+            font-size: 4.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            width: 380px;
+            padding: 1.5rem 0 2.7rem 0;
+
+            @include mixins.xl-device {
+              width: 100%;
+            }
+          }
+
+          .description {
+            width: 45rem;
+            @include mixins.xl-device {
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        .wrap-banner {
+          width: 50vw;
+          height: 71rem;
+          background-color: #dcffca;
+          border-radius: 1.7rem 0 0 1.7rem;
+          position: relative;
+
+          @include mixins.xl-device {
+            width: 100%;
+            border-radius: 0 0 1.7rem 1.7rem;
+          }
+          .wrap-content {
+            .banner-img {
+              width: 72rem;
+              height: auto;
+              object-fit: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: translateX(-23%);
+
+              @include mixins.xl-device {
+                transform: translateX(0);
+              }
+              img {
+                @include mixins.xl-device {
+                  width: 70rem;
+                  height: auto;
+                }
+                @include mixins.md-device {
+                  width: 65rem;
+                  transform: translateX(-15%);
+                }
+              }
+            }
+
+            .banner-text {
+              position: absolute;
+              bottom: 20%;
+              right: -5%;
+              width: 67.4rem;
+              transform: rotate(90deg);
+
+              @include mixins.xl-device {
+                bottom: 30%;
+                right: 0;
+              }
+              @include mixins.md-device {
+                right: -10%;
+              }
+
+              .special-text {
+                color: #216000;
+                font-size: 16.6rem;
+                font-weight: 800;
+                line-height: 100%;
+                opacity: 0.15;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

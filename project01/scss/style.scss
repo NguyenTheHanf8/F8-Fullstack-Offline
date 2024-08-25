@@ -1,0 +1,38 @@
+// Import global
+@use "partials/reset";
+@use "partials/fonts";
+@use "partials/base";
+@use "partials/mixins";
+// Import layout
+@use "partials/header";
+@use "partials/footer";
+
+// Import page
+@use "page/home";
+
+html {
+  font-size: 62.5%;
+
+  @include mixins.lg-device {
+    font-size: 50%;
+  }
+  @include mixins.sm-device {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+input,
+label,
+textarea {
+  font-family: inherit;
+}
+
+section {
+  margin-top: 10rem;
+}

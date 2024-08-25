@@ -1,0 +1,146 @@
+@use "./variables";
+@use "./mixins";
+.header {
+  width: 100%;
+  height: 10.8rem;
+  padding-top: 1rem;
+  background-color: variables.$whiteColor;
+  box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  @include mixins.sm-device {
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    @include mixins.md-device {
+      padding: 0;
+    }
+    .row {
+      flex-wrap: nowrap;
+      align-items: center;
+
+      .col-xxl-8 {
+        #open-navbar {
+          &:checked ~ .navbar-header {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .toggle-open {
+          display: none;
+          width: 100%;
+          font-size: 3rem;
+          text-align: center;
+          @include mixins.lg-device {
+            display: block;
+          }
+        }
+
+        .navbar-header {
+          padding-right: 4rem;
+          position: relative;
+          @include mixins.lg-device {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          .navbar-list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 5rem;
+
+            @include mixins.lg-device {
+              flex-direction: column;
+              row-gap: 2rem;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, 10%);
+              background-color: #efefef;
+            }
+
+            .navbar-item {
+              .nav-links {
+                position: relative;
+                color: #000;
+                padding-bottom: 3.4rem;
+                @include mixins.lg-device {
+                  padding-bottom: 0.2rem;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  height: 2px;
+                  width: 0%;
+                  background: variables.$lightgreenCOlor;
+                  transition: width 0.25s ease;
+                  @include mixins.lg-device {
+                    display: none;
+                  }
+                }
+
+                &:hover,
+                &:hover::after,
+                &.active,
+                &.active::after {
+                  width: 100%;
+                  color: variables.$lightgreenCOlor;
+                }
+              }
+            }
+          }
+        }
+      }
+      .col-xxl-2 {
+        .actions {
+          display: flex;
+          column-gap: 5rem;
+          position: relative;
+          @include mixins.lg-device {
+            column-gap: 1.5rem;
+          }
+          @include mixins.md-device {
+            column-gap: 1rem;
+            margin-left: -3rem;
+          }
+          @include mixins.sm-device {
+            margin-left: -10rem;
+          }
+
+          .cart-wrap {
+            position: relative;
+
+            .cart-quantity {
+              font-size: 1.08rem;
+              font-weight: 500;
+              color: variables.$whiteColor;
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(30%, -30%);
+              width: 1.35rem;
+              height: 1.35rem;
+              border-radius: 50%;
+              background-color: variables.$orangeColor;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
