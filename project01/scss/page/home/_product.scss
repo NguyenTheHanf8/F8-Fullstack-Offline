@@ -2,63 +2,59 @@
 @use "../../partials/mixins";
 
 .product {
-  padding-top: 10rem;
   .container {
-    .row {
-      .col-xxl-12 {
-        &:first-child {
-          margin-top: 2rem;
-          margin-bottom: 9.6rem;
+    .card-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5rem 0;
+      img {
+        height: 35.6rem;
+        width: auto;
+      }
+
+      a {
+        font-size: 2.333rem;
+        font-weight: 700;
+        padding: 1.79rem 0 1.28rem 0;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 4rem;
+          height: 1.67px;
+          background-color: #a3a3a3;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
         }
-        .row {
-          @include mixins.xl-device {
-            row-gap: 3rem;
-          }
-          .col-xxl-4 {
-            padding: 0;
-            .product-card {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              .card-heading {
-                font-size: 23.333px;
-                font-style: normal;
-                font-weight: 700;
-                padding-bottom: 3rem;
-              }
+      }
+      .card-quantity {
+        color: #656565;
+        line-height: 1.3;
+        padding: 1.667rem 0 0.633rem 0;
+      }
 
-              .card-quantity {
-                line-height: 2.1rem;
-              }
+      .card-value {
+        line-height: 1.3;
 
-              .card-price {
-                padding-bottom: 3rem;
-                .bigger-price {
-                  font-size: 2.3rem;
-                  font-weight: 600;
-                  line-height: 2.7rem;
-                }
-              }
-
-              .order-product {
-                padding: 1.3rem 1.17rem;
-                border-radius: 6.667px;
-                background-color: variables.$lightgreenCOlor;
-                color: variables.$textwhite;
-                border: none;
-                cursor: pointer;
-
-                &:hover {
-                  background-color: variables.$whiteColor;
-                  color: variables.$lightgreenCOlor;
-                  outline: 1px solid variables.$lightgreenCOlor;
-                  transition: all 0.25s ease;
-                }
-              }
-            }
-          }
+        .value-bigger {
+          font-size: 2.3rem;
+          font-weight: 600;
+          line-height: 2.667rem;
         }
+      }
+      .card-btn {
+        font-size: 1.667rem;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 3.1rem;
+        padding: 1.33rem 1.17rem;
+        border-radius: 6.667px;
+        background-color: variables.$primaryColor;
+        cursor: pointer;
       }
     }
   }

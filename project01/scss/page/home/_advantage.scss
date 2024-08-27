@@ -1,0 +1,35 @@
+@use "../../partials/variables";
+@use "../../partials/mixins";
+
+.advantage {
+  .container {
+    .wrap-card {
+      max-width: 28.8rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      column-gap: 1.5rem;
+      margin-bottom: 3.838rem;
+      background-color: #fff;
+      @include mixins.sm-device {
+        max-width: none;
+        padding: 1rem;
+        column-gap: 2rem;
+      }
+      .wrap-icon {
+        img {
+          width: 5.583rem;
+          height: 5.583rem;
+        }
+      }
+
+      .wrap-text {
+        .des-card {
+          font-size: 17px;
+          font-weight: 500;
+          padding: 0.5rem 0;
+        }
+      }
+    }
+  }
+}

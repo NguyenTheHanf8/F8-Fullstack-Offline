@@ -1,0 +1,72 @@
+@use "../../partials/variables";
+@use "../../partials/mixins";
+
+.feedback {
+  .container {
+    .wrap-img {
+      position: relative;
+      &::after {
+        content: "";
+        width: 43.9rem;
+        height: 43.9rem;
+        border-radius: 50%;
+        background-color: #fff0e7;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: translate(10%, 10%);
+      }
+      img {
+        width: 100%;
+        height: 49.8rem;
+      }
+    }
+
+    .wrap-formFeeback {
+      padding-left: 5vw;
+      padding-top: 14rem;
+      .wrap-heading {
+        padding-bottom: 2.6rem;
+      }
+
+      form {
+        .form-input {
+          width: 100%;
+          padding: 1.3rem 0 1.3rem 2rem;
+          border-radius: 6.667px;
+          border: 0.833px solid #a3a3a3;
+          margin-bottom: 2.26rem;
+        }
+
+        .wrap-input {
+          display: flex;
+          gap: 1rem;
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        .feedback-btn {
+          width: fit-content;
+          margin-left: auto;
+          .btn {
+            font-size: 1.667rem;
+            font-weight: 700;
+            color: #fff;
+            padding: 1.3rem 5rem;
+            border-radius: 6.667px;
+            background-color: variables.$primaryColor;
+            cursor: pointer;
+
+            &:hover {
+              background-color: variables.$secondaryColor;
+              transition: background-color 0.25s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}

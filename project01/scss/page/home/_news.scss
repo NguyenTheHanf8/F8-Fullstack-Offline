@@ -3,117 +3,96 @@
 
 .news {
   .container {
-    .wrap-heading {
-      .description {
-        width: 65.75rem;
-        margin: 2.3rem auto 2.8rem;
-      }
-    }
+    .content-wrap {
+      .description-section {
+        padding: 2.3rem 0 2.883rem 0;
+        width: 35vw;
+        margin: 0 auto;
 
-    .row {
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: center;
-
-      @include mixins.xxl-device {
-        margin: 0;
-      }
-
-      @include mixins.lg-device {
-        flex-wrap: wrap;
-      }
-      .col-xxl-4 {
-        .news-card {
-          text-align: left;
-          background-color: #fefefe;
-
-          &:hover img {
-            transform: scale(1.1);
-            transition: 0.25s ease;
-          }
-
-          .wrap-img {
-            width: 38.5rem;
-            height: 27.3rem;
-            margin: 0 auto 1.6rem;
-            border-radius: 7px;
-            overflow: hidden;
-
-            @include mixins.xxl-device {
-              width: 35rem;
-              height: 25rem;
-            }
-
-            @include mixins.lg-device {
-              width: 100%;
-            }
-
-            img {
-              width: 38.5rem;
-              height: 27.3rem;
-              object-fit: cover;
-
-              @include mixins.xxl-device {
-                width: 35rem;
-                height: 25rem;
-              }
-
-              @include mixins.lg-device {
-                width: 100%;
-              }
-            }
-          }
-
-          .wrap-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            row-gap: 1.6rem;
-            padding: 0 1rem;
-
-            .wrap-location {
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-
-              .location {
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: variables.$lightgreenCOlor;
-              }
-
-              .times {
-                @extend .location;
-                color: #a3a3a3;
-              }
-            }
-
-            .wrap-cardHeading {
-              .card-heading {
-                font-size: 2rem;
-                font-weight: 600;
-                line-height: 2.66rem;
-                padding-bottom: 1.6rem;
-              }
-            }
-          }
+        @include mixins.lg-device {
+          width: 70vw;
         }
       }
     }
 
-    .news-btn {
-      padding: 1.1rem 2.1rem;
-      font-size: 1.67rem;
-      font-weight: 700;
-      border-radius: 7px;
-      border: 1px solid variables.$lightgreenCOlor;
-      margin-top: 8rem;
-
-      &:hover {
-        color: variables.$whiteColor;
-        background-color: variables.$lightgreenCOlor;
+    .card-wrap {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.627rem;
+      &:hover img {
+        transform: scale(1.2);
         transition: 0.25s ease;
+      }
+      .img-wrap {
+        width: 100%;
+        max-height: 27.3rem;
+        border-radius: 6.667px;
+        overflow: hidden;
+
+        img {
+          width: auto;
+          min-height: 27.3rem;
+          border-radius: 6.667px;
+
+          @include mixins.lg-device {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .wrap-timestamp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        @include mixins.lg-device {
+          justify-content: flex-start;
+          column-gap: 5vw;
+        }
+
+        .timestamp {
+          color: variables.$primaryColor;
+        }
+
+        .calender {
+          display: flex;
+          align-items: center;
+          color: #a3a3a3;
+          gap: 1rem;
+
+          .timelaps {
+            letter-spacing: 0.2rem;
+          }
+        }
+      }
+
+      .card-description {
+        @include mixins.lg-device {
+          width: 70vw;
+        }
+      }
+    }
+
+    .wrap-btn {
+      margin-top: 8rem;
+      @include mixins.lg-device {
+        margin-top: 4rem;
+      }
+      .news-btn {
+        font-size: 1.667rem;
+        font-weight: 700;
+        padding: 1.17rem 2.17rem;
+        border-radius: 6.667px;
+        outline: 1px solid variables.$primaryColor;
+
+        &:hover {
+          background-color: variables.$primaryColorActvie;
+          color: #fff;
+          transition: all 0.25s ease;
+        }
       }
     }
   }
