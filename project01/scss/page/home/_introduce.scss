@@ -75,6 +75,7 @@
 
       @include mixins.md-device {
         height: 45rem;
+        width: 100%;
       }
       @include mixins.sm-device {
         height: 35rem;
