@@ -2,8 +2,8 @@ function isPrime(n) {
   // Kiểm tra các trường hợp đặc biệt
   if (n <= 1) return false;
   if (n === 2) return true;
-  // Kiểm tra các số chia hết từ 2 đến n
-  for (let i = 2; i <= n; i++) {
+  // Kiểm tra các số chia hết từ 2 đến (n - 1)
+  for (let i = 2; i <= n - 1; i++) {
     if (n % i === 0) return false;
   }
   return true;
