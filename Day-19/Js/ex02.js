@@ -1,7 +1,9 @@
 function caclEBill(consumption) {
   let totalCost = 0;
 
-  if (consumption > 0 && consumption <= 50) {
+  if (consumption <= 0) {
+    totalCost = 0;
+  } else if (consumption > 0 && consumption <= 50) {
     totalCost = consumption * 1.678; // Bậc 1: 0 - 50 kWh
   } else if (consumption > 50 && consumption <= 100) {
     totalCost = 50 * 1.678 + (consumption - 50) * 1.734; // Bậc 2: 51 - 100 kWh
