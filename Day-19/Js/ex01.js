@@ -2,8 +2,8 @@ function caclTaxiPostage(km) {
   let postage = 0;
 
   // Tính giá cước của taxi theo từng mốc quãng đường
-  if (km <= 0) {
-    postage = 0;
+  if (isNaN(km) || km <= 0) {
+    return "Quãng đường không hợp lệ. Vui lòng nhập số km lớn hơn không ";
   } else if (km > 0 && km <= 1) {
     postage = km * 15000;
   } else if (km > 1 && km <= 5) {
