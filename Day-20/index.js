@@ -1,23 +1,27 @@
-// Màu chạy qua các từ
-const changeColor = "red";
-const defaultColor = "black";
+const originalText = document.getElementById("animation-text").innerText;
 
-// Chọn đoạn văn bản cần tạo hiệu ứng
-const text = document.getElementById("animation-text");
+// Cắt chuỗi thành mảng
+const words = originalText.split(" ");
 
-// Phân chia đoạn văn thành từng từ và bọc nó trong thẻ span
-const words = text.innerText.split(" ");
-text.innerHTML = words.map((word) => `<span>${word}</span>`).join(" ");
-
-const spans = text.querySelectorAll("span"); // Lấy danh sách các span
+//Khởi tạo 1 biến để theo dõi vị trí từ hiện tại
 let currentIndex = 0;
-// Hàm thay đổi màu sắc chạy qua các từ
-function animateColor() {
-  // Đặt lại màu của tất cả các từ về màu mặc định
-  spans.forEach((span) => {
-    span.style.color = defaultColor;
-  });
-  spans[currentIndex].style.color = changeColor; // Đổi màu cho từ
-  currentIndex = (currentIndex + 1) % spans.length; // Chuyển sang từ tiếp theo
-}
-setInterval(animateColor, 1000); // Set thời gian chạy
+
+setInterval(() => {
+  // Khởi tạo 1 biến để ghi nội dung
+  let newContent = "";
+  for (let i = 0; i < words.length; i++) {
+    if (i === currentIndex) {
+      // Nếu từ hiện tại === từ được duyệt, thêm style vào từ đó
+      newContent += `<span style="color: red; font-size:30px"> ${words[i]} </span>`;
+    } else {
+      newContent += `<span style="font-size:30px"> ${words[i]} </span>`;
+    }
+  }
+
+  // Hiển thị ra màn hình
+  document.open();
+  document.write(`<div>${newContent}</div>`);
+  document.close();
+
+  currentIndex = (currentIndex + 1) % words.length;
+}, 1000); // Thay đổi mỗi 1000ms
