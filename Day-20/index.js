@@ -17,7 +17,7 @@ function animateColor() {
   spans.forEach((span) => {
     span.style.color = defaultColor;
   });
-  spans[currentIndex].style.color = changeColor; // Tô màu chính cho từ hiện tại
+  spans[currentIndex].style.color = changeColor; // Đổi màu cho từ
   currentIndex = (currentIndex + 1) % spans.length; // Chuyển sang từ tiếp theo
 }
 setInterval(animateColor, 1000); // Set thời gian chạy
