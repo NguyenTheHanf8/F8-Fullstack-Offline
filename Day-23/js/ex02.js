@@ -15,7 +15,13 @@ function classifyUsers(users) {
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
 
-    if (!user.name || !user.age || user.age < 0 || isNaN(user.age)) {
+    if (
+      user.name &&
+      !isNaN(user.age) &&
+      user.age > 0 &&
+      typeof user.name === "string" &&
+      typeof user.age === "number"
+    ) {
       invalidData.push(user);
     } else {
       validData.push(user);
