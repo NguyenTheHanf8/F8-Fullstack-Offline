@@ -40,7 +40,7 @@ students.sort((a, b) => {
     return nameA.middleName.localeCompare(nameB.middleName);
   }
 
-  // Nếu tên đệm cũng giống, so sánh họ
+  // Nếu tên đệm cũng giống nhau, so sánh họ
   return nameA.lastName.localeCompare(nameB.lastName);
 });
 

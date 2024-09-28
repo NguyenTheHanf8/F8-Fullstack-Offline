@@ -26,7 +26,7 @@ const updatedStudents = students.map((student) => {
 });
 
 updatedStudents.forEach((student) => {
-  const studentInfo = `ID: ${student.id}, Name: ${student.name}, Age: ${student.age}`;
+  const studentInfo = `id: ${student.id}, name: ${student.name}, age: ${student.age}`;
 
   if (student.isUnderage) {
     // Dưới 18, hiển thị với màu đỏ và in đậm

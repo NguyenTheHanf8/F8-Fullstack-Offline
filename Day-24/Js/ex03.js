@@ -8,8 +8,9 @@ const order = {
   ],
 };
 
-order.totalPrice = order.products.reduce((total, product) => {
-  return total + product.price * product.quantity;
-}, 0);
+order.totalPrice = order.products.reduce(
+  (total, { price, quantity }) => total + price * quantity,
+  0
+);
 
 console.log(order);
