@@ -8,9 +8,13 @@ const order = {
   ],
 };
 
-order.totalPrice = order.products.reduce(
-  (total, { price, quantity }) => total + price * quantity,
-  0
-);
+const caclTotalPrice = (products) => {
+  return products.reduce(
+    (total, { price, quantity }) => total + price * quantity,
+    0
+  );
+};
 
-console.log(order);
+order.totalPrice = caclTotalPrice(order.products);
+
+console.log(`Tổng giá trị đơn hàng: ${order.totalPrice}`);

@@ -17,31 +17,38 @@ const students = [
   { id: 16, name: "Nguyễn Nhung", age: 18 },
 ];
 
-// Tách họ, tên đệm và tên chính
-function splitName(fullName) {
-  const nameParts = fullName.split(" ");
-  const lastName = nameParts[0];
-  const firstName = nameParts[nameParts.length - 1];
-  const middleName = nameParts.slice(1, nameParts.length - 1).join(" ");
-  return { firstName, middleName, lastName };
-}
+const result = students.sort((a, b) => {
+  const nameA = a.name.split(" ");
+  const nameB = b.name.split(" ");
 
-students.sort((a, b) => {
-  const nameA = splitName(a.name);
-  const nameB = splitName(b.name);
+  // Lấy họ, tên đệm, và tên chính
+  const firstNameA = nameA[0];
+  const firstNameB = nameB[0];
+  const middleNameA = nameA.slice(1, -1).join(" ");
+  const middleNameB = nameB.slice(1, -1).join(" ");
+  const lastNameA = nameA.slice(-1)[0];
+  const lastNameB = nameB.slice(-1)[0];
 
   // So sánh tên chính
-  if (nameA.firstName !== nameB.firstName) {
-    return nameA.firstName.localeCompare(nameB.firstName);
+  if (lastNameA < lastNameB) {
+    return -1;
+  } else if (lastNameA > lastNameB) {
+    return 1;
   }
-
-  // Nếu tên chính giống nhau, so sánh tên đệm
-  if (nameA.middleName !== nameB.middleName) {
-    return nameA.middleName.localeCompare(nameB.middleName);
+  // Tên chính giống nhau thì so sánh tên đệm
+  if (middleNameA < middleNameB) {
+    return -1;
+  } else if (middleNameA > middleNameB) {
+    return 1;
   }
-
-  // Nếu tên đệm cũng giống nhau, so sánh họ
-  return nameA.lastName.localeCompare(nameB.lastName);
+  // Tên đệm giống nhau thì so sánh họ
+  if (firstNameA < firstNameB) {
+    return -1;
+  } else if (firstNameA > firstNameB) {
+    return 1;
+  } else {
+    return 0;
+  }
 });
 
-console.log(students);
+console.log(result);

@@ -17,15 +17,16 @@ const students = [
   { id: 8, name: "Le Huu Trong", age: 17 },
 ];
 
-const updatedStudents = students.map((student) => {
-  return {
-    ...student,
-    name: student.name.toUpperCase(),
-    isUnderage: student.age < 18,
-  };
+const updateListStudent = students.map((student) => {
+  const newStudent = {};
+  newStudent.id = student.id;
+  newStudent.age = student.age;
+  newStudent.name = student.name.toUpperCase();
+  newStudent.isUnderage = student.age < 18;
+  return newStudent;
 });
 
-updatedStudents.forEach((student) => {
+updateListStudent.forEach((student) => {
   const studentInfo = `id: ${student.id}, name: ${student.name}, age: ${student.age}`;
 
   if (student.isUnderage) {
