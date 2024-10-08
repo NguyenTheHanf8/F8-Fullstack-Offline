@@ -20,7 +20,6 @@ const students = [
 const result = students.sort((a, b) => {
   const nameA = a.name.split(" ");
   const nameB = b.name.split(" ");
-
   // Lấy họ, tên đệm, và tên chính
   const firstNameA = nameA[0];
   const firstNameB = nameB[0];
