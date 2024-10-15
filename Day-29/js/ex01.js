@@ -47,6 +47,7 @@ function createDots() {
   for (let i = 0; i < dataSlide.length; i++) {
     const dot = document.createElement("div");
     dot.classList.add("dot");
+    // console.log(dot.className);
     dot.dataset.index = i;
     dot.onclick = () => {
       crrSlide = i;
@@ -76,6 +77,7 @@ function newCarousel() {
     dot.classList.toggle("active", index === crrSlide);
   });
 }
+newCarousel();
 
 function prev() {
   crrSlide--;
@@ -95,5 +97,3 @@ setInterval(() => {
   if (crrSlide + 1 < dataSlide.length) crrSlide++;
   newCarousel();
 }, 3000);
-
-newCarousel();
