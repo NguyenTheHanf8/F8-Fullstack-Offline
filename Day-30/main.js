@@ -88,7 +88,7 @@ const deleteTodo = (index) => {
   if (todos[index]) {
     todos.splice(index, 1);
     renderTodos();
-    saveTodos(); // Lưu công việc sau khi xóa
+    saveTodos();
   } else {
     alert("Todo not found!");
   }
