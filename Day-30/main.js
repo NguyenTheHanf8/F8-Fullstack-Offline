@@ -89,8 +89,6 @@ const deleteTodo = (index) => {
     todos.splice(index, 1);
     renderTodos();
     saveTodos();
-  } else {
-    alert("Todo not found!");
   }
 };
 
