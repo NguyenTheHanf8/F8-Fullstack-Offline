@@ -6,13 +6,19 @@ const btnReset = document.querySelector("#btnReset");
 const btnSubmit = document.querySelector("#btnSubmit");
 let idEditing = null;
 let todos = [];
+let todoCount = 0;
 
 function generateRandomID() {
-  return "Todo_" + Math.floor(Math.random() * 1000);
+  todoCount++;
+  return `todo_${todoCount}`;
 }
 
 function renderTodos() {
-  todos.sort((a, b) => a.status - b.status);
+  todos.sort((a, b) => {
+    if (a.status === b.status) return 0;
+    if (a.status && !b.status) return 1;
+    if (!a.status && b.status) return -1;
+  });
   const data = todos
     .map((todo, index) => {
       return `
@@ -67,6 +73,7 @@ const addTodo = () => {
 
   todoForm.reset();
   renderTodos();
+  saveTodos();
 };
 
 const editTodo = (index) => {
@@ -78,13 +85,19 @@ const editTodo = (index) => {
 };
 
 const deleteTodo = (index) => {
-  todos.splice(index, 1);
-  renderTodos();
+  if (todos[index]) {
+    todos.splice(index, 1);
+    renderTodos();
+    saveTodos(); // Lưu công việc sau khi xóa
+  } else {
+    alert("Todo not found!");
+  }
 };
 
 const toggleStatus = (index) => {
   todos[index].status = !todos[index].status;
   renderTodos();
+  saveTodos();
 };
 
 btnReset.addEventListener("click", () => {
@@ -96,3 +109,17 @@ todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addTodo();
 });
+
+const saveTodos = () => {
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+const loadTodos = () => {
+  const savedTodos = localStorage.getItem("todos");
+  if (savedTodos) {
+    todos = JSON.parse(savedTodos);
+    todoCount = todos.length;
+    renderTodos();
+  }
+};
+loadTodos();
