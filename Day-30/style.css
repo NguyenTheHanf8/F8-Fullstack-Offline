@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+textarea {
+  resize: none;
+}
+
+#todo-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#todo-table th,
+#todo-table td {
+  white-space: normal;
+  word-wrap: break-word;
+}
