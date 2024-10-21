@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 700px;
+    margin: 200px auto;
+    padding: 30px;
+    color: #fff;
+    border-radius: 12px;
+    background-color: #3d4c5c;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.container h2 span {
+    color:#e08e09 ;
+}
+
+.wrapper {
+    margin-top: 12px;
+}
+
+.wrapper input,
+.wrapper button {
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.wrapper button {
+    background-color: #fcd18c;
+}
+
+/* hover container */
+.container:hover .wrapper input::placeholder {
+    color: #e08e09;
+}
+
+.container:hover input {
+    background-color: #ddd;
+}
+
+.container:hover .wrapper button {
+    background-color: #e08e09;
+    color: #fff;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Us a Line</title>
+    <link rel="stylesheet" href="../Day-9/css/ex03.css" />
+  </head>
+  <body>
+    <form action="#!">
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-text">
+            <h1>Drop Us a Line</h1>
+            <p>
+              Reach out us form contact form and we will get back to you
+              shortly.
+            </p>
+          </div>
+          <div class="wrapper-field">
+            <div class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                id="first-name"
+                placeholder=" "
+              />
+              <label for="first-name" class="form-label">First Name *</label>
+            </div>
+            <div class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                id="last-name"
+                placeholder=" "
+              />
+              <label for="last-name" class="form-label">Last Name *</label>
+            </div>
+            <div class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                id="email"
+                placeholder=" "
+              />
+              <label for="email" class="form-label">Email *</label>
+            </div>
+            <select name="form-control" id="formControlSelect">
+              <option value="select">Select a department</option>
+              <option value="sales">Sales</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Customer Support">Customer Support</option>
+            </select>
+          </div>
+          <div class="wrapper-msg">
+            <div class="form-field">
+              <textarea
+                name="message"
+                id="message"
+                class="form-input"
+                placeholder=" "
+              ></textarea>
+              <label for="message" class="form-label message">Message *</label>
+            </div>
+          </div>
+          <button class="btn" type="submit">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

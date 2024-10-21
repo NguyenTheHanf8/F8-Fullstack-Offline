@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body .container {
+    width: 1280px;
+    height: 720px;
+    margin: 100px auto;
+    background: url(../../Day-5/image/maxresdefault.jpg) no-repeat   ;
+    display: flex;
+    justify-content: center;
+}
+
+body div .wrapper-blurBackground {
+    width: 400px;
+    height: 210px;
+    border-radius: 4px;
+    margin-left: 190px;
+    margin-top: 200px;
+    padding-top: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 10px 10px 10px #00000031;
+}
+
+.container .wrapper-blurBackground span, a {
+    color: #000;
+    font-weight: 900;
+}
+
+.container .wrapper-blurBackground h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}

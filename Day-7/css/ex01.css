@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+ion-icon {
+  font-size: 1.3em;
+}
+
+.wrapper-menu {
+  max-width: 70%;
+  margin: 2em auto;
+}
+
+.wrapper-menu .menu-list {
+  border: 1px solid #ccc;
+  display: flex;
+}
+
+.wrapper-menu .menu-list > li + li {
+  border-left: 1px solid #ccc;
+}
+
+.wrapper-menu .menu-list li {
+  padding: 0.3em;
+}
+
+.wrapper-menu .menu-list li:nth-child(6) {
+  margin-left: auto;
+}
+
+.wrapper-menu .menu-list li:nth-child(5) {
+  border-right: 1px solid #ccc;
+}
+
+.menu-list li a {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+}
+
+.menu-list a span {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-menu .menu-list li:hover > a {
+  background-color: #2da5da;
+}
+
+.menu-list .about-us:hover .sub-menu,
+.menu-list .news:hover .sub-menu,
+.menu-list .portfolio:hover .sub-menu {
+  display: inline;
+}
+
+.menu-list .sub-menu {
+  display: none;
+}
+
+.menu-list .sub-menu a {
+  min-width: 15em;
+  padding: 1.5rem;
+}
+
+.menu-list .about-us,
+.menu-list .news,
+.menu-list .portfolio {
+  position: relative;
+}
+
+.sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 110%;
+  left: -0.1rem;
+  box-shadow: #00000057 0px 5px 20px 0px;
+}
+
+.sub-menu ul::before {
+  content: "";
+  position: absolute;
+  top: -0.5em;
+  left: 1em;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.sub-menu ul li + li {
+  border-top: 1px solid #ccc;
+}

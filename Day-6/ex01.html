@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="../Day-6/css/ex01.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container-form">
+      <form action="#!">
+        <h2>Hey there</h2>
+        <p>
+          <span> We'd like to hear from you. </span> Send us your message or
+          just say hy with our contact form or directly via phone, we love to
+          chat.
+        </p>
+        <div class="wrapper-form">
+          <!--form  name  -->
+          <div class="wrapper-contact">
+            <div class="icon">
+              <label for="name">
+                <ion-icon name="person-sharp"></ion-icon>
+              </label>
+            </div>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+            <div class="title">Enter your name</div>
+            <span>
+              <ion-icon name="star-sharp" class="appear"></ion-icon>
+              <ion-icon name="close-sharp" class="hidden"></ion-icon>
+            </span>
+          </div>
+
+          <!-- Form  email -->
+          <div class="wrapper-contact">
+            <div class="icon">
+              <label for="email">
+                <ion-icon name="mail"></ion-icon>
+              </label>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@domain.com"
+            />
+            <div class="title">Enter your email</div>
+            <span>
+              <ion-icon name="star-sharp" class="appear"></ion-icon>
+              <ion-icon name="close-sharp" class="hidden"></ion-icon>
+            </span>
+          </div>
+
+          <!-- Form  phone-->
+          <div class="wrapper-contact">
+            <div class="icon">
+              <label for="phone">
+                <ion-icon name="phone-portrait"></ion-icon>
+              </label>
+            </div>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+44 00 123"
+            />
+            <div class="title">Enter your number phone</div>
+            <span>
+              <ion-icon name="star-sharp" class="appear"></ion-icon>
+              <ion-icon name="close-sharp" class="hidden"></ion-icon>
+            </span>
+          </div>
+
+          <!-- Form subject -->
+          <div class="wrapper-contact">
+            <div class="icon">
+              <label for="phone">
+                <ion-icon name="browsers"></ion-icon>
+              </label>
+            </div>
+            <select name="subject" id="subject">
+              <option value="1">Subject</option>
+              <option value="2">Subject 2</option>
+              <option value="3">Subject 3</option>
+            </select>
+            <div class="title">Choose Subject</div>
+            <span>
+              <ion-icon name="chevron-expand" class="appear"></ion-icon>
+              <ion-icon name="close-sharp" class="hidden"></ion-icon>
+            </span>
+          </div>
+
+          <!-- Form message -->
+          <div class="wrapper-contact">
+            <div class="icon textarea">
+              <label for="message">
+                <ion-icon name="chatbox"></ion-icon>
+              </label>
+            </div>
+            <textarea name="message" id="message"></textarea>
+            <div class="title">Enter your message</div>
+            <span>
+              <ion-icon name="star-sharp" class="appear"></ion-icon>
+              <ion-icon name="close-sharp" class="hidden"></ion-icon>
+            </span>
+          </div>
+        </div>
+        <div class="btn-sendContact">
+          <label class="check-box">
+            Send me a copy of this message
+            <input type="checkbox" checked />
+          </label>
+          <button type="submit" class="btn">SEND</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

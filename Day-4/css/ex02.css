@@ -1,0 +1,37 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50%;
+    height: 50%;
+    margin: 50px auto;
+}
+
+blockquote p {
+    width: 80%;
+    font-size: 30px;
+    margin-left: 100px;
+    text-align: justify;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: "❝";
+    font-size: 50px;
+    background-color: #ccc;
+    padding: 8px 16px 0px 16px;
+    border-radius: 50%;
+}
+
+blockquote::after {
+    content: "❞";
+    float: right;
+    font-size: 50px;
+    padding: 8px 16px 0px 16px;
+    border-radius: 50%;
+    background-color: #ccc;
+}

@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  color: #717171;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #717171;
+}
+
+:root {
+  --primary-color: #ff574d;
+  --white-color: #fff;
+}
+/* Background container  */
+.container {
+  width: 80%;
+  background-image: url(../../Day-7/img/login-bg2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+/* Css Form-info */
+.container .wrapper-formLogIn {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 20em;
+  display: flex;
+  gap: 10em;
+  margin: 10em auto;
+  box-shadow: 0 0 10px 2px #ccc;
+}
+
+.container .wrapper-formLogIn .form-info {
+  max-width: 40%;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 6.5em 2em;
+  border-radius: 12px 0 0 12px;
+  color: var(--white-color);
+}
+
+.wrapper-formLogIn .form-info > h2 {
+  padding-bottom: 1em;
+}
+
+.form-info > h2 > span {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  margin-right: 0.5em;
+}
+
+.wrapper-formLogIn .form-info .arrow-right {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  position: absolute;
+  top: 14em;
+  left: 23.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #ccc;
+  z-index: 1;
+}
+
+.wrapper-formLogIn .form-info .arrow-right:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.wrapper-formLogIn .form-info .readMore {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  display: inline-block;
+  margin: 2.5em 0;
+  padding: 1rem 3.5rem;
+  border-radius: 4px;
+}
+
+.wrapper-formLogIn .form-info .nav-link > a {
+  display: inline-block;
+  color: var(--white-color);
+  padding: 1rem;
+  margin: 0 0.5rem 4em;
+  background-color: #da5b4e;
+  font-size: 1.5rem;
+}
+
+/* Css Form-logIn  */
+.container .form-logIn {
+  width: 60%;
+  height: 100%;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form-logIn h2 {
+  color: #272323;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.form-logIn h2 > span {
+  color: var(--primary-color);
+}
+
+.form-logIn h2 > span:nth-child(1) {
+  padding: 0.5em 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.form-logIn .form-field .form-input {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 3em;
+  padding: 0 2rem;
+  margin: 1.5rem 0 1.5rem 5rem;
+  border-radius: 4px;
+}
+
+.form-logIn .form-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7.1rem;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* Focus */
+.form-logIn .form-field .form-input:focus {
+  border-color: var(--primary-color);
+}
+
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label {
+  top: 20%;
+  padding: 0 0.5rem;
+  display: inline-block;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+}
+
+.form-logIn .checkmark {
+  margin: 1rem 5rem;
+  display: inline-block;
+}
+
+.form-logIn .forgot-password {
+  display: inline-block;
+  margin-left: 10em;
+}
+
+.form-logIn .btn-logIn {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.form-logIn .btn-logIn button {
+  padding: 1.5em 15.3em;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.register {
+  text-align: center;
+  padding-top: 4rem;
+}

@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.container .wrapper-menu {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 0;
+}
+.container .wrapper-menu .list-menu {
+  list-style: none;
+  width: 400px;
+}
+.list-menu .menu-item {
+  text-align: right;
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.list-menu .menu-item .menu-itemHeading {
+  font-size: 1.5em;
+}
+
+.menu-item::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #2f8375;
+  border-radius: 50%;
+  border: 10px solid rgb(219, 236, 233);
+  position: absolute;
+  right: -6.5rem;
+  top: 0;
+}
+
+.menu-item span {
+  position: absolute;
+  top: 4px;
+  right: -11em;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 12rem;
+  color: #8f8f92;
+}
+.menu-itemText {
+  margin-top: 8px;
+  color: #828285;
+}
+.menu-itemBtn {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 99em;
+  background-color: #f3f3f3;
+  transition: 0.25s;
+}
+.menu-itemBtn:hover {
+  background-color: #a26f5a;
+  color: #fff;
+  transition: 0.25s;
+}
+img {
+  width: 500px;
+  object-fit: contain;
+  position: relative;
+  left: 10em;
+  top: -10em;
+}

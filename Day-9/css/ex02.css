@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 2rem;
+}
+
+a {
+  display: none;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  margin-top: 9em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+a ion-icon {
+  border: 1px solid #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+
+.container .list-card {
+  max-width: 65%;
+  margin: 30px auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.container .list-card .card-item {
+  border: 1px solid #eee;
+  padding: 3rem 2rem;
+  width: calc(33.33% - 2rem);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-item .card-icon {
+  color: #c2a193;
+  font-size: 2.5em;
+}
+
+.card-item .card-header {
+  font-size: 1.3em;
+  padding: 2rem 0;
+}
+
+.card-item .card-text {
+  opacity: 0.6;
+}
+
+.card-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #916556ac;
+  opacity: 1;
+  display: none;
+}
+
+a:hover ion-icon {
+  background-color: #fff;
+  color: #000;
+}
+
+.card-item:hover .card-icon {
+  display: none;
+}
+
+.card-item:hover .card-header {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+}
+
+.card-item:hover .card-text {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+}
+
+.card-item:hover a {
+  display: flex;
+  align-items: center;
+}
+
+.card-item:hover::before {
+  opacity: 1;
+  display: block;
+}

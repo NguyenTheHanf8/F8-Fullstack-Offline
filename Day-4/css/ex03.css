@@ -1,0 +1,20 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 20px;
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 40px;
+}
+
+ul li::before {
+    content:"😊";
+    margin-right: 20px;
+}

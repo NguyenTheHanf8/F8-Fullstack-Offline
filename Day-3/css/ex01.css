@@ -1,0 +1,56 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 10px 0 20px;
+}
+.todos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+    width: 650px;
+    margin: 100px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.wrapper {
+    flex: 0 0 50%;
+    margin-bottom: 16px;
+}
+
+/* CSS label */
+div .wrapper .form-label {
+    font-weight: bolder ;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.wrapper .form-input,
+.wrapper .form-select {
+    width: 90%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+div label span {
+    opacity: 0.6;
+}
+
+/* CSS nút register */
+.btn-register {
+    width: 95%;
+    background-color: rgb(7, 151, 26);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin:10px 0 30px;
+    text-transform: uppercase;
+}

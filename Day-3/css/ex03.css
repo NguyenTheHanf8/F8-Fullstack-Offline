@@ -1,0 +1,42 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.todos {
+    width: 25%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper {
+    gap: 20px;
+    display: flex;
+}
+
+.wrapper label {
+    width: 100px;
+}
+
+.wrapper + .wrapper {
+    margin-top: 10px;
+}
+
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS button login */
+.btn-login{
+    text-align: center;
+    padding-top: 20px ;
+}
+
+.btn-login button {
+    padding: 4px 8px;
+}

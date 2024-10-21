@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.container .wrapper-profile {
+  width: 100%;
+  height: 300px;
+  background: url(../../Day-8/img/DJI_0030-fixed2-mini-20190727T100030844048.jpg)
+    no-repeat center / cover;
+  position: relative;
+}
+
+.container .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000004f;
+}
+
+.profile-info .info-logo {
+  width: 300px;
+  height: 250px;
+  background: #fff url(../../Day-8/img/logo.jpg) no-repeat center / contain;
+  position: absolute;
+  bottom: -6rem;
+  left: 5em;
+  border-radius: 8px;
+}
+
+.profile-info .info-content {
+  position: absolute;
+  bottom: 20%;
+  left: 22em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.profile-info .info-content h2 {
+  font-size: 2em;
+  font-weight: 500;
+  text-shadow: 5px 2px 6px #7f7359;
+}
+
+.profile-info .info-content .info-contentYear,
+.profile-info .info-content .info-contentProject {
+  display: inline-block;
+  padding-top: 1.5em;
+  padding-right: 1.5em;
+}
+
+.big-number {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.container .wrapper-profile .profile-nav {
+  position: absolute;
+  right: 5%;
+  bottom: -4rem;
+}
+
+.profile-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.profile-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+}
+
+.profile-nav ul li:hover a {
+  color: #dd787a;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #dd787a;
+}

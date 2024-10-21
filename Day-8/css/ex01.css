@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Asap", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.container .wrapper-banner {
+  width: 100%;
+  height: 100vh;
+  background: url(../../Day-8/img/ha-noi-melody-residences-cover.jpg) no-repeat
+    top / contain;
+  position: relative;
+}
+
+.container .wrapper-banner .wrapper {
+  background-color: #ffffffbe;
+  display: inline-block;
+  border-radius: 4px;
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+  padding: 2em;
+}
+
+.container .wrapper-banner .wrapper h2 {
+  color: #bf4240;
+  font-weight: 600;
+}
+
+.container .wrapper-banner .wrapper p,
+address {
+  color: #3f3424;
+  padding-top: 2rem;
+  line-height: 1.6;
+}
+
+.container .wrapper-banner .wrapper a {
+  font-family: "SFU", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #bf4240;
+  color: #fff;
+  position: absolute;
+  right: 3rem;
+  bottom: -2.5rem;
+  padding: 1.5rem;
+  border-radius: 4px;
+}

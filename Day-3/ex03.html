@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login</title>
+    <link rel="stylesheet" href="../Day-3/css/ex03.css" />
+  </head>
+  <body>
+    <form action="#!">
+      <div class="todos">
+        <div class="wrapper">
+          <label for="usename">Usename</label>
+          <div><input type="text" id="usename" name="usename" /></div>
+        </div>
+
+        <div class="wrapper">
+          <label for="password">Password</label>
+          <div><input type="password" id="password" name="password" /></div>
+        </div>
+
+        <div class="wrapper">
+          <label for="workplace">City of Employment</label>
+          <div><input type="text" id="workplace" name="workplace" /></div>
+        </div>
+
+        <div class="wrapper">
+          <label for="web-server">Web server</label>
+          <div>
+            <select name="web-server" id="web-server">
+              <option value="0">-Choose a sever-</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label>Please spectify your role</label>
+          <div>
+            <label>
+              <input type="radio" name="your-role" value="admin" />Admin
+            </label>
+            <label>
+              <input type="radio" name="your-role" value="engineer" />Engineer
+            </label>
+            <label>
+              <input type="radio" name="your-role" value="manager" />Manager
+            </label>
+            <label>
+              <input type="radio" name="your-role" value="guest" />Guest
+            </label>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label>Single Sign-on to the following:</label>
+          <div>
+            <label>
+              <input type="checkbox" name="sign-on" value="mail" />Mail
+            </label>
+            <label>
+              <input type="checkbox" name="sign-on" value="Payroll" />Payroll
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="sign-on"
+                value="Self-service"
+              />Self-service
+            </label>
+          </div>
+        </div>
+        <div class="btn-login">
+          <button type="button">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

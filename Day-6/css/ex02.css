@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family:"Roboto" , sans-serif;
+    color: #666666;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5em;
+}
+
+.container .service-list {
+    background-color: #ebf5fe ;
+    width: 60%;
+    margin: 5em auto;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.service-list .service-card {
+    background-color: #fefefe;
+    width: calc(33.33333% - 1em );
+    border-radius: 4px ;
+    box-shadow: #ccccccfa 0 0 10px 0px;
+}
+
+.service-card .service-head {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1.5rem 2.5rem;
+}
+
+.service-card .service-body {
+    padding: 0 2.5rem 1.5rem;
+}
+
+.service-card .service-body .readMore {
+    text-decoration: none;
+    color:#5c88ef;
+    font-weight: 800;
+    display: inline-block;
+    padding: 2rem 0;
+}
+
+/* Hover card */
+    .service-list .unique:hover {
+        outline: 1px solid #e4587c;
+    }
+
+    .service-list .theme:hover {
+        outline: 1px solid #4da3a4;
+    }
+
+    .service-list .digital:hover {
+        outline: 1px solid #e18531;
+    }
+
+    .service-list .website:hover {
+        outline: 1px solid #336ccf;
+    }
+
+    .service-list .reponsive:hover {
+        outline: 1px solid #7223cb;
+    }
+
+    .service-list .support:hover {
+        outline: 1px solid #69882c;
+    }
+
+/* Css icon */
+.unique .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #e4587c, #e3765b );
+    box-shadow: #e46c67 0px 0px 100px 0px;
+}
+
+.theme .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #4da3a4, #8bddaa );
+    box-shadow: #4da3a4 0px 0px 100px 0px;
+}
+
+.digital .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #e18531, #f5cd6a );
+    box-shadow: #e18531 0px 0px 100px 0px;
+}
+
+.website .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #336ccf, #7091f5 );
+    box-shadow: #336ccf 0px 0px 100px 0px;
+}
+
+.reponsive .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #7223cb, #c26fec );
+    box-shadow: #7223cb 0px 0px 100px 0px;
+}
+
+.support .service-head .service-icon {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #69882c, #94c55a );
+    box-shadow: #69882c 0px 0px 100px 0px;
+}

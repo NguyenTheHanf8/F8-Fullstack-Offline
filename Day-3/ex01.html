@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form sign up</title>
+    <link rel="stylesheet" href="../Day-3/css/ex01.css" />
+  </head>
+  <body>
+    <div class="todos">
+      <h1>Try a free sample</h1>
+      <p>
+        Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe
+        for sample of the Colombia Carlos Imbachi coffee. We'll also make sure
+        you don't miss out on new coffees that we add to our store regularly.
+      </p>
+      <form action="#!">
+        <div class="wrapper">
+          <label class="form-label" for="first-name">First name</label>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="John"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="last-name">Last name</label>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Smith"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="email">Email address</label>
+          <div>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@eample.com"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="address">Address</label>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Silk St"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="city">City</label>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              id="city"
+              name="city"
+              placeholder="London"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="state"
+            >State <span>(optional)</span>
+          </label>
+          <div>
+            <input class="form-input" type="text" id="state" name="state" />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="code">ZIP code</label>
+          <div>
+            <input
+              class="form-input"
+              type="text"
+              id="code"
+              name="code"
+              placeholder="EC2Y8DS"
+            />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label class="form-label" for="province">Country</label>
+          <div>
+            <select class="form-select" name="province" id="province">
+              <optgroup label="Select Coutry">
+                <option value="0">United Kingdom</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">Đà Nẵng</option>
+                <option value="3">TP Hồ Chí Minh</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <button class="btn-register" type="button">Send Me Free Coffee</button>
+      </form>
+    </div>
+  </body>
+</html>
