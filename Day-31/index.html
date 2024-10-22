@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <input
+          type="text"
+          id="search"
+          placeholder="search..."
+          oninput="searchTodos()"
+        />
+        <select id="filter" onchange="filterTodos()">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+        </select>
+        <ul id="todo-list"></ul>
+      </div>
+      <div class="right-section">
+        <h2>ADD Todo</h2>
+        <input
+          type="text"
+          id="newTitle"
+          placeholder="Title"
+          style="margin-bottom: 10px"
+        />
+        <input
+          type="text"
+          id="newDescription"
+          placeholder="Description..."
+          style="margin-bottom: 10px"
+        />
+        <button onclick="addTodo()">ADD</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

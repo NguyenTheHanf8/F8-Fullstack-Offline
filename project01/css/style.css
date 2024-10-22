@@ -204,7 +204,8 @@ h4 {
 .header .container .header-right .header-menu ul li a.active {
   color: #46b20f;
 }
-.header .container .header-right .header-menu ul li a.active:after, .header .container .header-right .header-menu ul li a:hover::after {
+.header .container .header-right .header-menu ul li a.active:after,
+.header .container .header-right .header-menu ul li a:hover::after {
   width: 100%;
 }
 .header .container .header-right .header-actions {
